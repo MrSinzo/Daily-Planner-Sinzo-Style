@@ -80,14 +80,26 @@ div.timeSlot {
 
 button {
   border-radius:20%;
-  text-align: start;
-  
+  max-height: 60px;
+  background-color: #06aed5;
 }
 
 .row{
   align-items: center;
 }
 
-/* #userInput{
+textarea{
+  border: 2px solid ;
+}
 
-} */
+.before{
+  background-color: #bb4e4e;
+}
+
+.current{
+  background-color: #77dd77;
+}
+
+.after{
+  background-color: aqua;
+}
