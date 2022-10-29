@@ -44,7 +44,7 @@ textarea {
 }
 /* Colors here*/
 .past {
-  background-color: #919090; /*hours in time that have passed show this color*/
+  background-color: #d5a4a4; /*hours in time that have passed show this color*/
   color: white;
 }
 

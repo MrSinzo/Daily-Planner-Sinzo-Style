@@ -9,8 +9,6 @@ $("#currentDay").text(
 var currentHour = moment().startOf("hour").format("HH:mm:ss"); // added this one for the for loop  // changed hh to HH for 24 hour format
 console.log(currentHour);
 var plannerContainer = document.querySelector(".container");
-
-var userBoxEl = document.getElementById("userBox");
 var userInputEl = document.getElementById("userInput");
 //button element hooks
 var editBtn9am = document.getElementById("am9Btn");
@@ -29,15 +27,15 @@ var timeBlocks = document.getElementsByClassName("timeBlock"); // added this one
 for (let i = 0; i < timeBlocks.length; i++) {
   // console.log(timeBlocks[i].children[0].innerHTML);
   var timeBlockHour = timeBlocks[i].children[0].innerHTML;
-  if ( currentHour > timeBlockHour[i]) {  // if current hour (eg 2pm) is greater than time block hour;
+  if (currentHour > timeBlockHour[i]) {  // if current hour (eg 2pm) is greater than time block hour;
     timeBlocks[i].classList.add("past"); // this should change all previous hours in time to a gray background
-    console.log(timeBlockHour + " im in the past")
-  } else if (currentHour == timeBlockHour[i]) { // if current hour matches timeblock, should turn the respective box red
-    timeBlocks[i].classList.add("present");
+    console.log(timeBlockHour + " im in the past");
+  } else if (currentHour == timeBlockHour[i]) { 
+    timeBlocks[i].classList.add("present"); // if current hour matches timeblock, should turn the respective box red
     console.log(timeBlockHour + " im the current hour");
   } else {
-    timeBlocks[i].classList.add("future"); // if hour is in the future, should turn these boxes green
-    console.log(timeBlockHour + " im in the future")
+    timeBlocks[i].classList.add("future"); // if hour is in the future, should turn these boxes green.
+    console.log(timeBlockHour + " im in the future");
   }
 }
 
