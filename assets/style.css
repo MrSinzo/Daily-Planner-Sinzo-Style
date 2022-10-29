@@ -42,19 +42,19 @@ textarea {
   color: #000000;
   border-top: 1px dashed #000000;
 }
-
+/* Colors here*/
 .past {
-  background-color: #d3d3d3;
+  background-color: #919090; /*hours in time that have passed show this color*/
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ff6961; /* Current hour shows this color*/
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #77dd77; /* All hours after current time*/
   color: white;
 }
 
@@ -92,14 +92,6 @@ textarea{
   border: 2px solid ;
 }
 
-.before{
-  background-color: #bb4e4e;
-}
-
-.current{
-  background-color: #77dd77;
-}
-
-.after{
-  background-color: aqua;
+h2 {
+  text-align: center;
 }
