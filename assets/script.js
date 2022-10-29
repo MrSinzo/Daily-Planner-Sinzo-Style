@@ -194,9 +194,9 @@ function showLastTodos() {
     document.getElementById("userInput5").innerText = pm5Slot.userText;
   }
 }
-//when application fires up, this will generate the last entered text that was saved to local storage
+
 function init() {
-  showLastTodos();
+  showLastTodos(); //when application fires up, this will generate the last entered text that was saved to local storage
 }
 
 init();
