@@ -6,10 +6,9 @@ $("#currentDay").text(
   )
 ); // changed hh to HH for 24 hour format
 
-var currentHour = moment().startOf("hour").format("HH:mm:ss"); // added this one for the for loop  // changed hh to HH for 24 hour format
+var currentHour = moment().startOf("hour").format("HH:mm"); // added this one for the for loop  // changed hh to HH for 24 hour format
 console.log(currentHour);
-var plannerContainer = document.querySelector(".container");
-var userInputEl = document.getElementById("userInput");
+
 //button element hooks
 var editBtn9am = document.getElementById("am9Btn");
 var editBtn10am = document.getElementById("am10Btn");
@@ -21,24 +20,25 @@ var editBtn3pm = document.getElementById("pm3Btn");
 var editBtn4pm = document.getElementById("pm4Btn");
 var editBtn5pm = document.getElementById("pm5Btn");
 var timeBlocks = document.getElementsByClassName("timeBlock"); // added this one for the for loop
-// Added this for loop to run through the "timBlocks" class and apply background colors dependant on real time
-// ( affixed to each time slot container)
 
+// Added this for loop to run through the "timeBlocks" class and apply 
+// background colors dependant on real time
+// (affixed to each time slot container)
 for (let i = 0; i < timeBlocks.length; i++) {
-  // console.log(timeBlocks[i].children[0].innerHTML);
   var timeBlockHour = timeBlocks[i].children[0].innerHTML;
-  if (currentHour > timeBlockHour[i]) {  // if current hour (eg 2pm) is greater than time block hour;
-    timeBlocks[i].classList.add("past"); // this should change all previous hours in time to a gray background
+  if (currentHour > timeBlockHour) {
+
+    timeBlocks[i].classList.add("past"); // this will change all previous hours in time to a dark pink background
     console.log(timeBlockHour + " im in the past");
-  } else if (currentHour == timeBlockHour[i]) { 
-    timeBlocks[i].classList.add("present"); // if current hour matches timeblock, should turn the respective box red
+  } else if (currentHour === timeBlockHour) {
+    timeBlocks[i].classList.add("present"); // if current hour matches timeblock, turns the respective box red
     console.log(timeBlockHour + " im the current hour");
   } else {
-    timeBlocks[i].classList.add("future"); // if hour is in the future, should turn these boxes green.
+    timeBlocks[i].classList.add("future"); // if hour is in the future, turns these boxes green.
     console.log(timeBlockHour + " im in the future");
   }
 }
-
+// button event listeners to save the text information inputted by user
 editBtn9am.addEventListener("click", function handleClick(event) {
   event.preventDefault();
   saveTodo9();
@@ -193,13 +193,8 @@ function showLastTodos() {
   if (pm5Slot !== null) {
     document.getElementById("userInput5").innerText = pm5Slot.userText;
   }
-  //test local save
-  var pm9Slot = JSON.parse(localStorage.getItem("savedText9pm"));
-  if (pm9Slot !== null) {
-    document.getElementById("userInput9pm").innerText = pm9Slot.userText;
-  }
 }
-
+//when application fires up, this will generate the last entered text that was saved to local storage
 function init() {
   showLastTodos();
 }
