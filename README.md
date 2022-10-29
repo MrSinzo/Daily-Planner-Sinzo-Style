@@ -29,7 +29,7 @@ This Application was built with BootStrap, Moment.js and a little bit of jQuery.
 ## Screenshot of working application and URL link
 ![ScreenShot of Deplyed Application](/W-D-S_LIVE.png)
 
-Deployed Website Link [Click Here!](/https://mrsinzo.github.io/Daily-Planner-Sinzo-Style/)
+Deployed Website Link [Click Here!](https://mrsinzo.github.io/Daily-Planner-Sinzo-Style)
 
 ## Credits and Licenses
 Using MIT License [Check it here!](https://opensource.org/licenses/MIT)
