@@ -20,7 +20,7 @@ This is a simple Daily Planner with a Time tracking function to help narrow down
 
 ## Why did I make this?
 
-As a very busy student still working a part-time job and performing generic life applications, (Chores, family duites, etc. ) Time management is difficult to make up on the fly. I created
+As a very busy student still working a part-time job and performing generic life applications, (Chores, family duites, etc. ) Time management is difficult to make up on the fly. I created a application that will attempt to bring better time management to whomever wishes to use this application. 
 
 ## How did I go about building this?
 
